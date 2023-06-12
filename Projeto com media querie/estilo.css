@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --color1: #afb2ea;
+    --color2: #8487bc;
+    --color3: #585c8e;
+    --color4: #2c3160;
+    --color5: #000632;
+    --alfa-color: #FFFFFF;
+    --black-color: #000000;
+}
+
+article{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color2);
+}
+
+article > header{
+    height: 12vh;
+    background-color: var(--color1);
+    display: flex;
+    padding: 10px 26px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+article > header > section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+article > header > section h1{
+    color: var(--color4);
+    font-size: 30px;
+}
+
+
+article > header > section ul{
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+article > header > section ul li > a, i{
+    color: var(--color4);
+}
+
+article > header > section ul li:nth-child(2){
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+article > header > .inputHeader{
+    position: relative;
+    display: flex;
+}
+
+article > header > .inputHeader > input {
+    width: 30vw;
+    height: 46px;
+    border-radius: 8px;
+    padding-left: 12px;
+    background-color: var(--color2);
+    color: var(--alfa-color);
+    position: relative;
+    font-size: 16px;
+}
+
+article > header > .inputHeader > input + span{
+    position: absolute;
+    top: 28%;
+    left: 2%;
+    color: var(--alfa-color);
+    pointer-events: none;
+}
+
+article > header > .inputHeader > input:focus{
+    border: 2px solid var(--color3);
+}
+
+article > header > .inputHeader > input:focus + span{
+    visibility: hidden;
+}
+
+article > header > .imgProfile{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color2);
+    cursor: pointer;
+}
+
+article > header > .imgProfile i{
+    color: var(--alfa-color);
+}
+
+@media only screen and (max-width: 1024px){
+    
+}
+
+@media only screen and (max-width: 768px){
+
+}
+
+@media only screen and (max-width: 600px){
+
+}
