@@ -45,23 +45,38 @@ article > header > section{
     gap: 20px;
 }
 
+article > header > section button{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    visibility: hidden;
+}
+
+article > header > section button #hamb{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    visibility: hidden;
+    font-size: 20px;
+}
+
 article > header > section h1{
     color: var(--alfa-color);
     font-size: 30px;
 }
 
 
-article > header > section nav ul{
+article > header > section .navbar nav ul{
     display: flex;
     gap: 26px;
     align-items: center;
 }
 
-article > header > section nav ul li > a, i{
+article > header > section .navbar nav ul li > a, i{
     color: var(--alfa-color);
 }
 
-article > header > section nav ul li:nth-child(2){
+article > header > section .navbar nav ul li:nth-child(2){
     display: flex;
     align-items: center;
     gap: 2px;
@@ -81,6 +96,7 @@ article > header > .inputHeader > input {
     color: var(--alfa-color);
     position: relative;
     font-size: 16px;
+    flex: 1;
 }
 
 article > header > .inputHeader > input + span{
@@ -132,7 +148,6 @@ article > main > section:first-child{
 }
 
 article > main > section:nth-child(2){
-    border: 2px solid red;
     height: 100%;
     width: calc(100% - 35%);
 }
@@ -152,13 +167,241 @@ article > main > section:nth-child(2) > ul li{
 }
 
 @media only screen and (max-width: 1024px){
-    
+    article > header > section button #hamb{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    article > header > section h1{
+        padding-left: 200%;
+    }
+    article > header > section button{
+        cursor: pointer;
+    }
+    article > header > section button #hamb{
+        visibility: visible;
+    }
+    article > header > section .navbar nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        flex-direction: column;
+        top: 0;
+        left: -100;
+        background-color: #00000050;
+        transition: all 300ms ease;
+        opacity: 0;
+        visibility: hidden;
+        gap: 0;
+        align-items: baseline;
+    }
+    article > header > section .navbar nav ul.active{
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+    article > header > section .navbar nav ul li{
+        background-color: var(--alfa-color);
+        width: 50%;
+    }
+    article > header > section .navbar nav ul li:nth-child(4){
+        border-radius: 0px 0px 8px 0px;
+    }
+    article > header > section .navbar nav ul li a{
+        color: #000000;
+        display: block;
+        line-height: 40px;
+        padding-left: 16px;
+    }
+    article > header > section .navbar nav ul li i{
+        color: #000000;
+    }
+    article > header > .inputHeader{
+        width: 280px;
+        margin-left: 50px;
+    }
+    article > header > .inputHeader input{
+        width: 100%;
+    }
+    article > main{
+        padding: 26px;
+        display: flex;
+        width: 100%;
+        gap: 46px;
+    }
+    article > main > section:first-child{
+        width: 50%;
+    }
+    article > main > section:nth-child(2){
+        width: 50%;
+    }
+    article > main > section:nth-child(2) > ul{
+        justify-content: center;
+        width: 100%;
+    }
+    article > main > section:nth-child(2) > ul li{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 768px){
-    
+    article > header > section h1{
+        padding-left: 200%;
+    }
+    article > header > section button{
+        cursor: pointer;
+    }
+    article > header > section button #hamb{
+        visibility: visible;
+    }
+    article > header > section .navbar nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        flex-direction: column;
+        top: 0;
+        left: -100;
+        background-color: #00000050;
+        transition: all 300ms ease;
+        opacity: 0;
+        visibility: hidden;
+        gap: 0;
+        align-items: baseline;
+    }
+    article > header > section .navbar nav ul.active{
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+    article > header > section .navbar nav ul li{
+        background-color: var(--alfa-color);
+        width: 50%;
+    }
+    article > header > section .navbar nav ul li:nth-child(4){
+        border-radius: 0px 0px 8px 0px;
+    }
+    article > header > section .navbar nav ul li a{
+        color: #000000;
+        display: block;
+        line-height: 40px;
+        padding-left: 16px;
+    }
+    article > header > section .navbar nav ul li i{
+        color: #000000;
+    }
+    article > header > .inputHeader{
+        width: 280px;
+        margin-left: 50px;
+    }
+    article > header > .inputHeader input{
+        width: 100%;
+    }
+    article > main{
+        padding: 26px;
+        display: flex;
+        width: 100%;
+        gap: 46px;
+    }
+    article > main > section:first-child{
+        width: 50%;
+    }
+    article > main > section:nth-child(2){
+        width: 50%;
+    }
+    article > main > section:nth-child(2) > ul{
+        justify-content: center;
+        width: 100%;
+    }
+    article > main > section:nth-child(2) > ul li{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 600px){
-
+    article > header > section h1{
+        padding-left: 50%;
+    }
+    article > header > section button{
+        cursor: pointer;
+    }
+    article > header > section button #hamb{
+        visibility: visible;
+    }
+    article > header > section .navbar nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        flex-direction: column;
+        top: 0;
+        left: -100;
+        background-color: #00000050;
+        transition: all 300ms ease;
+        opacity: 0;
+        visibility: hidden;
+        gap: 0;
+        align-items: baseline;
+    }
+    article > header > section .navbar nav ul.active{
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+    article > header > section .navbar nav ul li{
+        background-color: var(--alfa-color);
+        width: 50%;
+    }
+    article > header > section .navbar nav ul li:nth-child(4){
+        border-radius: 0px 0px 8px 0px;
+    }
+    article > header > section .navbar nav ul li a{
+        color: #000000;
+        display: block;
+        line-height: 40px;
+        padding-left: 16px;
+    }
+    article > header > section .navbar nav ul li i{
+        color: #000000;
+    }
+    article > header > .inputHeader{
+        width: 50%;
+        margin-left: 20px;
+    }
+    article > header > .inputHeader input{
+        width: 100%;
+    }
+    article > header > .inputHeader input + span{
+        top: 30%;
+        left: 6%;
+    }
+    article > header > .inputHeader span{
+        font-size: 14px;
+    }
+    article > header > .imgProfile{
+        margin-left: 4px;
+    }
+    article > main{
+        padding: 26px;
+        display: flex;
+        width: 100%;
+        gap: 46px;
+        flex-direction: column;
+    }
+    article > main > section:first-child{
+        width: 50%;
+        height: 40%;
+    }
+    article > main > section:nth-child(2){
+        width: 50%;
+    }
+    article > main > section:nth-child(2) > ul{
+        justify-content: center;
+        width: 100%;
+    }
+    article > main > section:nth-child(2) > ul li{
+        width: 100%;
+    }
 }
